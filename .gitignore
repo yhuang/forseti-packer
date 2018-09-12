@@ -1,0 +1,12 @@
+.idea/
+.idea/*
+.DS_Store
+
+.vagrant/
+
+**/builds
+**/*.box
+**/.vagrant/*
+**/iso
+
+packer_cache/
