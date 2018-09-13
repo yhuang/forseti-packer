@@ -9,7 +9,10 @@
     "iso_name": "CentOS-7-x86_64-DVD-1804.iso",
     "ks_path": "http/ks.cfg",
     "user_home_dir": "/home/centos",
-    "forseti_version": "2.2.0"
+    "forseti_version": "2.2.0",
+    "network_project_id": "{{env `PROJECT_ID`}}",
+    "subnetwork": "default",
+    "zone": "us-central1-b"
   },
   "builders": [
     {
@@ -17,13 +20,13 @@
       "machine_type": "f1-micro",
       "disk_size": "10",
       "disk_type": "pd-standard",
-      "project_id": "{{user `project_id`}}",
+      "project_id": "{{user `network_project_id`}}",
       "source_image_family": "centos-7",
       "image_name": "forseti-centos7-v{{isotime \"20060102-1504\"}}",
       "zone": "{{user `zone`}}",
       "ssh_username": "{{user `ssh_username`}}",
       "ssh_pty": true,
-      "network": "default"
+      "network": "{{user `subnetwork`}}"
     },
     {
       "type": "vmware-iso",
