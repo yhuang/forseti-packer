@@ -1,6 +1,6 @@
 {
   "variables": {
-    "box_basename": "forseti",
+    "box_basename": "forseti-security",
     "ssh_username": "centos",
     "ssh_password": "{{env `PASSWORD`}}",
     "build_timestamp": "{{isotime \"20060102-1504\"}}",
@@ -9,7 +9,7 @@
     "iso_name": "CentOS-7-x86_64-DVD-1804.iso",
     "ks_path": "http/ks.cfg",
     "user_home_dir": "/home/centos",
-    "forseti_version": "2.2.0",
+    "forseti_version": "2.3.0",
     "network_project_id": "{{env `PROJECT_ID`}}",
     "subnetwork": "default",
     "zone": "us-central1-b"
@@ -22,11 +22,12 @@
       "disk_type": "pd-standard",
       "project_id": "{{user `network_project_id`}}",
       "source_image_family": "centos-7",
-      "image_name": "forseti-centos7-v{{isotime \"20060102-1504\"}}",
+      "image_name": "{{user `box_basename`}}-v{{isotime \"200601021504\"}}",
       "zone": "{{user `zone`}}",
       "ssh_username": "{{user `ssh_username`}}",
       "ssh_pty": true,
-      "network": "{{user `subnetwork`}}"
+      "network": "{{user `subnetwork`}}",
+      "image_family": "{{user `box_basename`}}"
     },
     {
       "type": "vmware-iso",
