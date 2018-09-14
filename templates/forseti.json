@@ -91,7 +91,7 @@
         "provisioning-scripts/install-google-cloud-sdk.sh",
         "provisioning-scripts/install-forseti.sh",
         "provisioning-scripts/configure-forseti-logrotate.sh",
-        "provisioning-scripts/install-cloud-sql-proxy.sh",
+        "provisioning-scripts/install-cloudsql-proxy.sh",
         "provisioning-scripts/clean-up.sh"
       ]
     }
