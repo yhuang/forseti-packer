@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CLOUDSQL_PROXY=/usr/local/bin/cloudsql-proxy
+CLOUDSQL_PROXY=/usr/bin/cloudsql-proxy
 
 wget -O $CLOUDSQL_PROXY https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64
 

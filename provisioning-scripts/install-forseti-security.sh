@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
-FORSETI_DIR=$(pwd)/forseti-security
-
 git clone https://github.com/GoogleCloudPlatform/forseti-security.git
-cd $FORSETI_DIR
+cd forseti-security
 git fetch --all
 git checkout tags/v$FORSETI_VERSION
 
-chmod -R ug+rwx $FORSETI_DIR/configs $FORSETI_DIR/rules
-
 # Install Forseti Security
 python setup.py install
+
+FORSETI=$(which forseti)
+FORSETI_INSTALL_DIR=$(dirname ${FORSETI})
+
+ln -s $FORSETI_INSTALL_DIR/forseti_enforcer $FORSETI_INSTALL_DIR/forseti-enforcer
+ln -s $FORSETI_INSTALL_DIR/forseti_server $FORSETI_INSTALL_DIR/forseti-server
