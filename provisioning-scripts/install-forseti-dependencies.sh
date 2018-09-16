@@ -60,6 +60,14 @@ yum --disablerepo="*" --enablerepo="epel" install -y \
 jq \
 python-pip
 
+# umask 0022 would make the new mask 0644 (0666-0022=0644) meaning that
+# group and others have read (no write or execute) permissions. The "extra"
+# digit (the first number = 0), specifies that there are no special modes.
+CURRENT_UMASK=$(umask)
+umask 0022
+
 pip install --upgrade pip
 pip install -q --upgrade setuptools wheel
 pip install -q --ignore-installed --upgrade -r /tmp/requirements.txt
+
+umask $CURRENT_UMASK

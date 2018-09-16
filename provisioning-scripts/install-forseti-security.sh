@@ -9,5 +9,5 @@ git checkout tags/v$FORSETI_VERSION
 
 chmod -R ug+rwx $FORSETI_DIR/configs $FORSETI_DIR/rules
 
-# Install Forseti
+# Install Forseti Security
 python setup.py install

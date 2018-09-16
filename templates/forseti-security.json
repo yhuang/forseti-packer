@@ -89,7 +89,7 @@
         "provisioning-scripts/install-forseti-dependencies.sh",
         "provisioning-scripts/install-git.sh",
         "provisioning-scripts/install-google-cloud-sdk.sh",
-        "provisioning-scripts/install-forseti.sh",
+        "provisioning-scripts/install-forseti-security.sh",
         "provisioning-scripts/configure-forseti-logrotate.sh",
         "provisioning-scripts/install-cloudsql-proxy.sh",
         "provisioning-scripts/clean-up.sh"

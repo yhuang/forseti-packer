@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-name = 'forseti'
+name = 'forseti-security'
 
 Vagrant.configure(2) do |config|
   config.hostmanager.enabled = true
