@@ -8,8 +8,7 @@
     "iso_checksum_type": "sha256",
     "iso_name": "CentOS-7-x86_64-DVD-1804.iso",
     "ks_path": "http/ks.cfg",
-    "user_home_dir": "/home/centos",
-    "forseti_version": "2.3.0",
+    "forseti_version": "2.4.0",
     "network_project_id": "{{env `PROJECT_ID`}}",
     "subnetwork": "default",
     "zone": "us-central1-b"
