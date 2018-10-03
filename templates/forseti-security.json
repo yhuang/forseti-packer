@@ -78,6 +78,11 @@
       "destination": "/tmp/requirements.txt"
     },
     {
+      "type": "file",
+      "source": "files/cli.py",
+      "destination": "/tmp/cli.py"
+    },
+    {
       "type": "shell",
       "environment_vars": [
         "FORSETI_VERSION={{user `forseti_version`}}"

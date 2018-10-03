@@ -12,6 +12,9 @@ FORSETI_INSTALL_DIR=$(pwd)
 git fetch --all
 git checkout tags/v$FORSETI_VERSION
 
+# Patch Forseti Security
+cp /tmp/cli.py $FORSETI_INSTALL_DIR/google/cloud/forseti/services/cli.py
+
 # Install Forseti Security
 python setup.py install
 
