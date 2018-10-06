@@ -21,7 +21,8 @@ libffi-devel \
 libpcap-devel \
 lsof \
 make \
-mysql-devel \
+mysql-community-client \
+mysql-community-devel \
 nano \
 net-tools \
 nfs-utils \

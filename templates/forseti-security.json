@@ -57,6 +57,23 @@
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "files/mysql-community.repo",
+      "destination": "/tmp/mysql-community.repo"
+    },
+    {
+      "type": "file",
+      "source": "files/RPM-GPG-KEY-mysql",
+      "destination": "/tmp/RPM-GPG-KEY-mysql"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo \"{{user `ssh_password`}}\" | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
+      "scripts": [
+        "provisioning-scripts/add-yum-repos.sh"
+      ]
+    },
+    {
       "type": "shell",
       "expect_disconnect": true,
       "pause_before": "10s",
@@ -76,11 +93,6 @@
       "type": "file",
       "source": "files/requirements.txt",
       "destination": "/tmp/requirements.txt"
-    },
-    {
-      "type": "file",
-      "source": "files/cli.py",
-      "destination": "/tmp/cli.py"
     },
     {
       "type": "shell",
