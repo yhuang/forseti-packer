@@ -17,10 +17,6 @@
   $ gcloud auth activate-service-account --key-file <Path to the Terraform Admin service account key>
   ```
 
-  GOOGLE_APPLICATION_CREDENTIALS=<Path to the Terraform Admin service account key>
-  TRUSTED_IMAGES_PROJECT_NAME=<Your Trusted Images Project Name (Not Its Project ID)>
-  TF_VAR_trusted_images_states_bucket=<Your Trusted Images States Bucket Name>
-
   4. Set the following environment variables in the Forseti Packer repo's `forseti-packer.env` file to fit your Terraform Admin project and Trusted Images project deployment:
   ```
   GOOGLE_APPLICATION_CREDENTIALS=<path to the Terraform Admin service account key>
