@@ -20,7 +20,7 @@
   4. Set the following environment variables in the Forseti Packer repo's `forseti-packer.env` file to fit your Terraform Admin project and Trusted Images project deployment:
   ```
   GOOGLE_APPLICATION_CREDENTIALS=<path to the Terraform Admin service account key>
-  TRUSTED_IMAGES_PROJECT_NAME=<your Terraform Admin project name (not its project ID)>
+  TRUSTED_IMAGES_PROJECT_NAME=<your Trusted Images project name (not its project ID)>
   REGION=<the region in which your packer builder instance will run>
   FORSETI_VERSION=<the version of Forseti Security you plan to deploy>
   ```
